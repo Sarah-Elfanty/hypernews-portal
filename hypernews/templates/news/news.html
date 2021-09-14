@@ -1,0 +1,18 @@
+<html>
+<body>
+<h2>Hyper news</h2>
+{% for Date in sorted_CreationDates %}
+<h4>{{Date}}</h4>
+
+<ul>
+{% for Dict in news_list %}
+{% if Dict.created == Date%}
+<li><a href="/news/{{Dict.link}}/">{{Dict.title}}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+{% endfor %}
+
+<p><a href="/news/create/" target="_blank"> Future Page </a><p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+<h2>Hyper news</h2>
+
+<form action="/news/" method="get">{% csrf_token %}
+<input type="search" name="q">
+<button>Search</button>
+</form>
+
+</body>
+</html>
